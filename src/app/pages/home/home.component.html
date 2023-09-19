@@ -7,22 +7,30 @@
           {{ food.name }}
         </div>
         <span class="favorite {{food.favorite?'':'not'}}">
-          ❤
+          <img src="/assets/icons/heart-full.svg" alt="">
         </span>
         <div class="stars">
           <app-star-rating [stars]="food.stars" />
         </div>
+        <div class="product-item-footer">
+          <div class="origins">
+              <span *ngFor="let origin of food.origins">
+                {{origin}}
+              </span>
+          </div>
+          <div class="cook-time">
+              <span>
+                <img src="/assets/icons/clock.svg" alt="">
+              </span>
+              {{food.cookTime}}
+          </div>
+      </div>
+      <div class="price">
+          <span>
+              {{food.price|currency}}
+          </span>
+      </div>
       </div>
     </a>
   </li>
 </ul>
-
-<!--
-price!: number;
-tags?: string[];
-favorite: boolean = false;
-stars: number = 0;
-imageUrl!: string;
-origins!: string [];
-cookTime!: string;
--->
