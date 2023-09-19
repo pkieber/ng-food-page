@@ -2,6 +2,27 @@
   <li *ngFor="let food of foods">
     <a>
       <img src="{{ food.imageUrl }}" alt="">
+      <div class="content">
+        <div class="name">
+          {{ food.name }}
+        </div>
+        <span class="favorite {{food.favorite?'':'not'}}">
+          ❤
+        </span>
+        <div class="stars">
+          <app-star-rating [stars]="food.stars" />
+        </div>
+      </div>
     </a>
   </li>
 </ul>
+
+<!--
+price!: number;
+tags?: string[];
+favorite: boolean = false;
+stars: number = 0;
+imageUrl!: string;
+origins!: string [];
+cookTime!: string;
+-->
