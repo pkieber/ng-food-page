@@ -1,0 +1,21 @@
+header {
+  background: white;
+  padding: 0;
+  border-bottom: 1px solid grey;
+}
+
+a {
+  color: grey;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 16px;
+}
