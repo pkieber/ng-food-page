@@ -17,6 +17,7 @@ ul li a {
   flex-direction: column;
   overflow: hidden;
   color: #e72929;
+  transition: all 125ms ease-in-out;
 }
 
 li a:hover {
@@ -48,10 +49,12 @@ li a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+
 }
 
 .origins {
-  flex: 9;
+  display: flex;
 }
 
 .origins span {
@@ -65,8 +68,18 @@ li a:hover {
 
 .cook-time {
   font-size: .8rem;
-  flex: 3;
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    display: flex;
+  }
+
+  span {
+    display: flex;
+  }
 }
 
 .price {
