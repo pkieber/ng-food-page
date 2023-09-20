@@ -22,7 +22,7 @@ export class CartService {
 
 
   removeFromCart(foodId: number): void {
-    this.cart.items.filter(item => item.food.id != foodId);
+    this.cart.items = this.cart.items.filter(item => item.food.id !== foodId);
   }
 
 
