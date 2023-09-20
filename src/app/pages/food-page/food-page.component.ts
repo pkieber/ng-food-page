@@ -25,4 +25,6 @@ export class FoodPageComponent implements OnInit {
 
   }
 
+  addToCart() {}
+
 }
