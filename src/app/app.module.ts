@@ -10,6 +10,7 @@ import { StarRatingComponent } from './components/star-rating/star-rating.compon
 import { SearchComponent } from './components/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { TagsComponent } from './components/tags/tags.component';
+import { FoodPageComponent } from './pages/food-page/food-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TagsComponent } from './components/tags/tags.component';
     HomeComponent,
     StarRatingComponent,
     SearchComponent,
-    TagsComponent
+    TagsComponent,
+    FoodPageComponent
   ],
   imports: [
     BrowserModule,
