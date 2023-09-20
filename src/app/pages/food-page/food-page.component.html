@@ -1,1 +1,38 @@
-<p>food-page works!</p>
+<div class="container">
+  <img [src]="food.imageUrl" [alt]="food.name" />
+
+  <div class="details">
+    <div class="header">
+
+      <span class="name">
+        {{ food.name }}
+      </span>
+
+      <span class="favorite">
+        <img *ngIf="food.favorite" src="/assets/icons/heart-full.svg" alt="Full Heart">
+        <img *ngIf="!food.favorite" src="/assets/icons/heart-empty.svg" alt="Empty Heart">
+      </span>
+
+      <div class="rating">
+        <app-star-rating [stars]="food.stars" [size]="1.4"/>
+      </div>
+
+      <div class="origins">
+        <span *ngFor="let origin of food.origins">
+          {{ origin }}
+        </span>
+      </div>
+      <!-- Only show tag of specific food item -->
+      <div class="tags">
+        <app-tags [foodPageTags]="food.tags" justifyContent="start"></app-tags>
+      </div>
+
+      <div class="cook-time">
+          <span>
+              Time to cook about <strong>{{food.cookTime}}</strong> minutes
+          </span>
+      </div>
+
+    </div>
+  </div>
+</div>
