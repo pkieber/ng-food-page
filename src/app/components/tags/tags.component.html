@@ -5,7 +5,7 @@
 </div>
 
 <!-- Used inside a selected food-page -->
-<div *ngIf="foodPageTags">
+<div *ngIf="foodPageTags" [style.justifyContent] = "justifyContent">
   <a *ngFor="let tagName of foodPageTags" routerLink="/tag/{{tagName}}">
     {{tagName}}
   </a>
