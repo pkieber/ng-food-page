@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
+import { SearchComponent } from './components/search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { StarRatingComponent } from './components/star-rating/star-rating.compon
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
