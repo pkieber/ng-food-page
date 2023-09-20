@@ -11,6 +11,7 @@ import { SearchComponent } from './components/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { TagsComponent } from './components/tags/tags.component';
 import { FoodPageComponent } from './pages/food-page/food-page.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FoodPageComponent } from './pages/food-page/food-page.component';
     StarRatingComponent,
     SearchComponent,
     TagsComponent,
-    FoodPageComponent
+    FoodPageComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,
