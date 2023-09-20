@@ -9,6 +9,13 @@ export class FoodService {
 
   constructor() { }
 
+
+  getAllFoodsBySearchTerm(searchTerm: string): Food[] {
+    return this.getAll().filter(food =>
+      food.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }
+
   getAllTags(): Tag[] {
     return [
       { name: 'All', count: 14 },

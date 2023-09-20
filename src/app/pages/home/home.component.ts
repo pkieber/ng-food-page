@@ -16,22 +16,14 @@ export class HomeComponent implements OnInit  {
   constructor(private foodService: FoodService, private route: ActivatedRoute){}
 
   ngOnInit(): void {
-    // Initialize the originalFoods array with all food items
-    this.originalFoods = this.foodService.getAll();
-    this.foods = this.originalFoods;
-
-    // Search functionality
     this.route.params.subscribe(params => {
-      if (params['searchTerm']) {
-        this.foods = this.originalFoods.filter(food =>
-          food.name.toLowerCase().includes(params['searchTerm'].toLowerCase())
-        );
-      } else if (params['tag']) {
+      if (params['searchTerm'])
+        this.foods = this.foodService.getAllFoodsBySearchTerm(params['searchTerm']);
+      else if (params['tag'])
         this.foods = this.foodService.getAllFoodsByTag(params['tag']);
-      } else {
-        // If no search term or tag is provided, reset to the original data
-        this.foods = this.originalFoods;
-      }
-    });
+      else
+        this.foods = this.foodService.getAll();
+    })
   }
+
 }
